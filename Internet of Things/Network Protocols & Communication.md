@@ -11,19 +11,19 @@ Network protocols define the rules and language that devices use to communicate 
 - Wi-Fi: Ideal for devices that require a high-speed, low-latency connection, such as 
 IP cameras or robots.
 
-[Click to topic](Topics/WiFi.md)
+[Click to topic](Protocols/WiFi.md)
 
 - Bluetooth: Suitable for low power devices that need to connect over short distances, such as wearables or sensors.
 
-[Click to topic](Topics/Bluetooth.md)
+[Click to topic](Protocols/Bluetooth.md)
 
 - Zigbee: Perfect for low-power, long-range mesh networks, such as home automation systems or smart cities.
 
-[Click to topic](Topics/Zigbee.md)
+[Click to topic](Protocols/Zigbee.md)
 
 - LoRaWAN: Provides long-range, low-power communication for remotely located devices, such as agricultural sensors or water meters.
 
-[Click to topic](Topics/LoRaWAN.md)
+[Click to topic](Protocols/LoRaWAN.md)
 
 ## 2. Communication models in IoT:
 
