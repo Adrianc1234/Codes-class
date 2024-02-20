@@ -20,4 +20,4 @@ def server_status():
     return jsonify({'status': 'Activo'})
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Inicia el servidor en modo de depuración
+    app.run(port=6000,debug=True)  # Inicia el servidor en modo de depuración
