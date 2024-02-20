@@ -22,6 +22,7 @@ By the end of the class, students will be able to:
 [Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Components/Attributes.md)
 
 - Relationship: The connection between two entities.
+- 
 [Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Components/Relation.md)
 
 ## Fundamental principles:
