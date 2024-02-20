@@ -15,31 +15,32 @@ By the end of the class, students will be able to:
 
 - Entity: A real-world object or concept that is represented in the database.
 
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Components/Entity.md)
 
 - Attribute: A property or characteristic of an entity.
 
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Components/Attributes.md)
 
 - Relationship: The connection between two entities.
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Components/Relation.md)
+
 ## Fundamental principles:
 
 - Atomicity: data should not be divided into smaller units.
 
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Principles/Atomicity.md)
 
 - Consistency: Data must be accurate and consistent throughout the database.
 
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Principles/Consistency.md)
 
 - Integrity: Data must be complete and protected from unauthorized access.
 
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Principles/Integrity.md)
 
 - Normalization: Redundancy and anomalies in the data must be avoided.
 
-[Click to the topic]()
+[Click to the topic](https://github.com/Adrianc1234/Topics-Repository/blob/f0f1529ee51b427b2188320a2134fc32cd9082c8/Database%20Management/Principles/Normalization.md)
 
 [Diagram for these principles](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgravitar.biz%2Fbi%2Fmodelo-acid-base-datos%2F&psig=AOvVaw1BJL330z6-G80rwERfohMW&ust=1708542275400000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMjI74zOuoQDFQAAAAAdAAAAABAE)
 
