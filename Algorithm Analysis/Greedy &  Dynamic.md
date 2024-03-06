@@ -1,32 +1,36 @@
-# Algoritmos Greedy y Programación Dinámica
+## Greedy Algorithms and Dynamic Programming
 
-## Algoritmos Greedy (Voraces)
+### Greedy Algorithms
 
-Los algoritmos greedy son una estrategia de resolución de problemas que sigue la idea de elegir la opción óptima local en cada paso con la esperanza de encontrar el óptimo global al final. No garantizan la solución óptima en todos los casos, pero son eficientes para ciertos problemas.
+Greedy algorithms are a problem-solving strategy that follows the idea of choosing the locally optimal option at each step with the hope of finding the global optimum at the end. They do not guarantee optimal solutions in all cases, but they are efficient for certain problems.
 
-Estos son también conocidos como algoritmos voraces, son una metodología de resolución de problemas que sigue un enfoque iterativo y miópico. En cada paso, el algoritmo elige la opción más prometedora o "mejor" disponible sin considerar las consecuencias futuras de esa elección. Esta "mejor" opción se selecciona según un criterio de optimización local, con la esperanza de que estas elecciones locales conducirán a una solución global óptima para el problema completo.
+These algorithms, also known as "myopic algorithms", are a methodology for solving problems that follows an iterative and myopic approach. At each step, the algorithm chooses the most promising or "best" available option without considering the future consequences of that choice. This "best" option is selected according to a local optimization criterion, with the hope that these local choices will lead to an optimal global solution for the entire problem.
 
-Características de los Algoritmos Greedy:
-- Elección Greedy: En cada paso, el algoritmo hace una elección que parece ser la mejor en ese momento, basándose en un criterio de optimización local.
-- Optimización Local: No revisa las decisiones tomadas previamente ni considera las futuras. Solo se enfoca en maximizar o minimizar el criterio de selección inmediato.
-- No retrocede: Una vez que se toma una decisión, el algoritmo nunca retrocede para reconsiderarla, incluso si esa decisión no resulta ser la óptima.
-- Eficiencia: Los algoritmos greedy tienden a ser más eficientes en términos de tiempo de ejecución comparados con otros enfoques, aunque esto puede venir a costa de no siempre encontrar la solución óptima global.
+**Characteristics of Greedy Algorithms:**
 
-Aplicaciones de Algoritmos Greedy:
-- Problema de la mochila fraccionaria
-- Algoritmo de Kruskal para encontrar el árbol de expansión mínima
-- Algoritmo de Dijkstra para encontrar el camino más corto
+* **Greedy Choice:** At each step, the algorithm makes a choice that seems to be the best at that time, based on a local optimization criterion.
+* **Local Optimization:** It does not review previously made decisions or consider future ones. It only focuses on maximizing or minimizing the immediate selection criterion.
+* **No Backtracking:** Once a decision is made, the algorithm never backtracks to reconsider it, even if that decision does not turn out to be optimal.
+* **Efficiency:** Greedy algorithms tend to be more efficient in terms of execution time compared to other approaches, although this may come at the cost of not always finding the global optimal solution.
 
-### Ejemplo: El problema del cambio
-Dado un conjunto de denominaciones de monedas y un valor de cambio, el objetivo es encontrar el número mínimo de monedas necesario para hacer ese cambio.
+**Applications of Greedy Algorithms:**
 
-Denominaciones: 1, 5, 10, 25
-Cambio: 36 centavos
+* Fractional knapsack problem
+* Kruskal's algorithm for finding the minimum spanning tree
+* Dijkstra's algorithm for finding the shortest path
 
-Solución Greedy:
-~~~~python
+**Example: The change problem:**
+
+Given a set of coin denominations and a change value, the goal is to find the minimum number of coins needed to make that change.
+
+Denominations: 1, 5, 10, 25
+Change: 36 cents
+
+**Greedy Solution:**
+
+```python
 def cambio_greedy(monedas, cambio):
-    monedas.sort(reverse=True)  # Ordenamos las monedas de mayor a menor
+    monedas.sort(reverse=True)  # Sort coins from highest to lowest
     total_monedas = 0
     for moneda in monedas:
         while cambio >= moneda:
@@ -34,39 +38,43 @@ def cambio_greedy(monedas, cambio):
             total_monedas += 1
     return total_monedas
 
-# Ejemplo de uso
+# Example usage
 monedas = [1, 5, 10, 25]
 cambio = 36
 print(f"Monedas necesarias: {cambio_greedy(monedas, cambio)}")
-~~~~
+```
 
-### Ejercicio Greedy:
-Dadas denominaciones de monedas [1, 3, 4] y un valor de cambio 6, utiliza el enfoque greedy para encontrar el número mínimo de monedas necesario.
+**Greedy Exercise:**
+
+Given coin denominations [1, 3, 4] and a change value of 6, use the greedy approach to find the minimum number of coins required.
 
 
+## Dynamic Programming
 
-## Programación Dinámica
-La programación dinámica es un método para resolver problemas complejos descomponiéndolos en subproblemas más simples y almacenando los resultados de estos para no tener que recalcularlos, optimizando así el tiempo de ejecución. Es especialmente útil en problemas de optimización.
+Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems and storing the results of these so that they do not have to be recalculated, thus optimizing execution time. It is especially useful in optimization problems.
 
-En resumen, es una técnica para resolver problemas de optimización rompiendo el problema en subproblemas más simples, resolviéndolos una vez y almacenando sus soluciones (en lo que se llama "memoización" o mediante el uso de tabulación), de manera que cuando el mismo subproblema ocurre nuevamente, la solución ya está disponible y no es necesario recalcularla.
+In short, it is a technique for solving optimization problems by breaking the problem into simpler subproblems, solving them once and storing their solutions (in what is called "memoization" or by using tabulation), so that when the same subproblem occurs again, the solution is already available and does not need to be recalculated.
 
-Características de la Programación Dinámica:
-- Descomposición en Subproblemas: La PD descompone el problema principal en subproblemas más pequeños y manejables.
-- Almacenamiento de Soluciones: Almacena las soluciones de los subproblemas en una tabla (array o matriz), evitando así el trabajo redundante de resolver el mismo subproblema varias veces.
-- Solución de Abajo hacia Arriba (Bottom-Up) o de Arriba hacia Abajo (Top-Down): Puede construir soluciones empezando desde los subproblemas más simples y subiendo hacia el problema completo (bottom-up) o descomponiendo el problema principal en subproblemas de manera recursiva hasta llegar a los casos base y luego combinar esas soluciones (top-down).
-- Optimización: La PD es especialmente útil en problemas de optimización, donde se busca la solución más eficiente (máximo o mínimo) entre todas las posibles.
+**Characteristics of Dynamic Programming:**
 
-Aplicaciones de la Programación Dinámica:
-- Problema de la mochila 0-1
-- Cálculo de números de Fibonacci
-- Algoritmo de Bellman-Ford para encontrar el camino más corto en grafos con pesos negativos
+* **Decomposition into Subproblems:** DP decomposes the main problem into smaller and more manageable subproblems.
+* **Solution Storage:** Stores the solutions of the subproblems in a table (array or matrix), thus avoiding the redundant work of solving the same subproblem multiple times.
+* **Bottom-Up or Top-Down Solution:** It can build solutions starting from the simplest subproblems and moving up to the complete problem (bottom-up) or by decomposing the main problem into subproblems recursively until reaching the base cases and then combining those solutions (top-down).
+* **Optimization:** DP is especially useful in optimization problems, where the most efficient solution (maximum or minimum) is sought among all possible ones.
 
-### Ejemplo: Fibonacci
-La secuencia de Fibonacci es un clásico ejemplo donde la programación dinámica puede mejorar significativamente la eficiencia respecto a una implementación recursiva simple.
+**Applications of Dynamic Programming:**
 
-Solución con Programación Dinámica:
+* 0-1 knapsack problem
+* Fibonacci number calculation
+* Bellman-Ford algorithm for finding the shortest path in graphs with negative weights
 
-~~~~python
+**Example: Fibonacci**
+
+The Fibonacci sequence is a classic example where dynamic programming can significantly improve efficiency over a simple recursive implementation.
+
+**Dynamic Programming Solution:**
+
+```python
 def fibonacci_dp(n):
     if n <= 1:
         return n
@@ -76,17 +84,7 @@ def fibonacci_dp(n):
         fib[i] = fib[i - 1] + fib[i - 2]
     return fib[n]
 
-# Ejemplo de uso
+# Example usage
 n = 10
 print(f"Fibonacci de {n}: {fibonacci_dp(n)}")
-~~~~
-
-### Ejercicio de Programación Dinámica:
-
-Implementa una función que utilice programación dinámica para resolver el problema de la mochila 0-1, donde se te dan pesos y valores de n ítems, junto con la capacidad de la mochila W. Debes calcular la máxima ganancia total que se puede obtener sin exceder la capacidad de la mochila.
-
-
-## Diferencias Clave entre Algoritmos Greedy y Programación Dinámica
-- Optimalidad: Los algoritmos greedy no siempre garantizan una solución óptima global, mientras que la programación dinámica se utiliza para asegurar la solución óptima al considerar todas las posibles configuraciones.
-- Retroceso: Los algoritmos greedy no retroceden para reconsiderar sus elecciones, pero la programación dinámica puede reconsiderar decisiones previas al reconstruir la solución a partir de las soluciones almacenadas de los subproblemas.
-- Aplicabilidad: Los algoritmos greedy son más adecuados para problemas donde las decisiones locales óptimas conducen a una solución global óptima. La programación dinámica es adecuada para problemas que tienen una estructura de subproblemas superpuestos y un principio de optimalidad.
+```

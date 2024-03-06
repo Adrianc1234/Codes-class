@@ -19,5 +19,11 @@ def receive_data():
 def server_status():
     return jsonify({'status': 'Activo'})
 
+# Endpoint que devuelve el estado del servidor
+@app.route('/status_dec', methods=['GET'])
+def server_status_dec():
+    return jsonify({'status': 'Desactivado'})
+
+
 if __name__ == '__main__':
     app.run(port=6000,debug=True)  # Inicia el servidor en modo de depuración
